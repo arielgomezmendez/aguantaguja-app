@@ -31,7 +31,7 @@ const DesktopNav = () => {
         <Link href="/shop">Tienda</Link>
       </li>
       <li>
-        <Link href="/contacto">Contacto</Link>
+        <Link href="/contact">Contacto</Link>
       </li>
     </ul>
   );

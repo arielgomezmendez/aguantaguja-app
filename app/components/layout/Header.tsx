@@ -13,7 +13,7 @@ const navItems = [
   { href: "/events", label: "Eventos" },
   { href: "/gallery", label: "Galeria" },
   { href: "/shop", label: "Tienda" },
-  { href: "/contacto", label: "Contacto" },
+  { href: "/contact", label: "Contacto" },
 ];
 
 const Header = () => {
