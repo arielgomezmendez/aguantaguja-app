@@ -21,7 +21,7 @@ const Header = () => {
 
   return (
     <header className="text-[#A1A1AA]">
-      <nav aria-label="Navegación principal">
+      <nav>
         <div className="flex items-center justify-between px-6 pt-4 md:hidden">
           <Link href="/" onClick={() => setIsMenuOpen(false)}>
             <Image
