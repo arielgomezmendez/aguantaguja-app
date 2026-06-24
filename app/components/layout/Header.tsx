@@ -41,7 +41,7 @@ const Header = () => {
           </button>
         </div>
 
-        <DesktopNav/>
+        <DesktopNav />
 
         {isMenuOpen && (
           <ul className="mx-6 mt-4 flex flex-col gap-4 border-t border-white/10 py-6 text-center md:hidden">
