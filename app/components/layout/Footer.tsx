@@ -1,11 +1,11 @@
 import Link from "next/link";
-import InstagramIcon from '@mui/icons-material/Instagram';
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="mt-20 flex items-center justify-around gap-6 border-t border-white/10 bg-[#050505] py-10 text-center text-[#A1A1AA]">
+    <footer className=" flex md:flex-row flex-col items-center justify-around gap-6 border-t border-white/10 py-10 text-center text-[#A1A1AA]">
       <Link
         href="/"
         className="text-lg font-semibold uppercase tracking-[0.18em] text-white"

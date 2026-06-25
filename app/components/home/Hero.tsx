@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="flex flex-col items-center justify-center text-center px-6 mt-18 "
+      className="flex flex-col items-center justify-center text-center px-6 py-18 bg-[#111111]"
     >
       <h1 className="text-[#F5F5F5] text-6xl  md:text-8xl tracking-wide font-special">
         ARTE EN LA PIEL
@@ -15,14 +15,14 @@ const Hero = () => {
         quos et quaerat odit! Dolorum eveniet velit totam magni est odit dolor
         temporibus ab hic quae? Perspiciatis sapiente maxime voluptatibus sit.
       </p>
-      <div className="hero-buttons  flex flex-row gap-6">
+      <div className="hero-buttons  flex md:flex-row flex-col gap-6">
         <Link
           href="/artists"
-          className="bg-[#FF9800] px-3 py-2 text-xl font-bold "
+          className="bg-[#FF9800] px-3 py-2  font-bold "
         >
           Conoce a nuestros artistas
         </Link>
-        <Link href="/us" className="bg-[#F5F5F5] px-3 py-2 text-xl font-bold">
+        <Link href="/us" className="bg-[#F5F5F5] px-3 py-2  font-bold">
           Visita el estudio
         </Link>
       </div>

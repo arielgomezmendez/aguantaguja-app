@@ -4,7 +4,7 @@ import React from "react";
 
 const DesktopNav = () => {
   return (
-    <ul className="mt-4 hidden items-center justify-evenly md:flex">
+    <ul className="pb-10 hidden items-center justify-evenly md:flex">
       <li>
         <Link href="/us">Nosotros</Link>
       </li>
