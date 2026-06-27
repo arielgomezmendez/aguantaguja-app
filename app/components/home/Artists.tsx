@@ -11,7 +11,7 @@ const Artists = () => {
       bg-cover bg-center px-6 py-24 text-center"
     >
       <div className="relative z-10 max-w-3xl">
-        <h2 className="font-special text-5xl tracking-wide md:text-7xl">
+        <h2 className="font-special text-5xl tracking-wide md:text-7xl text-[#F5F5F5]">
           Artistas
         </h2>
         <p className="text-xl text-[#F5F5F5]">
