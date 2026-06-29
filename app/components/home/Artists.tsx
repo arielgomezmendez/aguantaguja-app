@@ -19,7 +19,12 @@ const Artists = () => {
           con una calidad inigualable.
         </p>
       </div>
-      <Link href="/artists" className=" bg-[#FF9800] px-2 py-2 font-bold">Conoce a nuestros artistas</Link>
+      <Link
+        href="/artists"
+        className="bg-[#FF9800] px-2 py-2 font-bold transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#ffad33] hover:shadow-lg hover:shadow-[#FF9800]/25 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FF9800]"
+      >
+        Conoce a nuestros artistas
+      </Link>
     </section>
   );
 };

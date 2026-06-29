@@ -65,13 +65,24 @@ const Gallery = () => {
       <ul className="grid grid-cols-2 md:grid-cols-4 gap-6">
         {images.map((image) => (
           <li key={image.src}>
-            <figure className="overflow-hidden rounded-lg">
-              <Image src={image.src} alt={image.src} width={300} height={150} />
+            <figure className="h-80 overflow-hidden rounded-lg">
+              <Image
+                src={image.src}
+                alt={image.src}
+                width={300}
+                height={150}
+                className="object-cover "
+              />
             </figure>
           </li>
         ))}
       </ul>
-      <Link href="/gallery" className=" bg-[#FF9800] px-2 py-2 font-bold">Ver más proyectos</Link>
+      <Link
+        href="/gallery"
+        className="bg-[#FF9800] px-2 py-2 font-bold transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#ffad33] hover:shadow-lg hover:shadow-[#FF9800]/25 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FF9800]"
+      >
+        Ver más proyectos
+      </Link>
     </section>
   );
 };
