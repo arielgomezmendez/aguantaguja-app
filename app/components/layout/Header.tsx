@@ -50,7 +50,7 @@ const Header = () => {
                 <Link
                   href={item.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="block py-1"
+                  className="block py-1 transition-colors duration-300 hover:text-[#FF9800]"
                 >
                   {item.label}
                 </Link>

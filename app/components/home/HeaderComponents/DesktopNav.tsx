@@ -6,13 +6,28 @@ const DesktopNav = () => {
   return (
     <ul className="pb-10 hidden items-center justify-evenly md:flex">
       <li>
-        <Link href="/us">Nosotros</Link>
+        <Link
+          href="/us"
+          className="transition-colors duration-300 hover:text-[#FF9800]"
+        >
+          Nosotros
+        </Link>
       </li>
       <li>
-        <Link href="/artists">Artistas</Link>
+        <Link
+          href="/artists"
+          className="transition-colors duration-300 hover:text-[#FF9800]"
+        >
+          Artistas
+        </Link>
       </li>
       <li>
-        <Link href="/events">Eventos</Link>
+        <Link
+          href="/events"
+          className="transition-colors duration-300 hover:text-[#FF9800]"
+        >
+          Eventos
+        </Link>
       </li>
       <li style={{ position: "relative", top: "28px" }}>
         <Link href="/">
@@ -25,13 +40,28 @@ const DesktopNav = () => {
         </Link>
       </li>
       <li>
-        <Link href="/gallery">Galería</Link>
+        <Link
+          href="/gallery"
+          className="transition-colors duration-300 hover:text-[#FF9800]"
+        >
+          Galería
+        </Link>
       </li>
       <li>
-        <Link href="/shop">Tienda</Link>
+        <Link
+          href="/shop"
+          className="transition-colors duration-300 hover:text-[#FF9800]"
+        >
+          Tienda
+        </Link>
       </li>
       <li>
-        <Link href="/contact">Contacto</Link>
+        <Link
+          href="/contact"
+          className="transition-colors duration-300 hover:text-[#FF9800]"
+        >
+          Contacto
+        </Link>
       </li>
     </ul>
   );
