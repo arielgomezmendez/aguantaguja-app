@@ -2,6 +2,7 @@ import Image from "next/image";
 import Hero from "./components/home/Hero";
 import Artists from "./components/home/Artists";
 import Gallery from "./components/home/Gallery";
+import Events from "./components/home/Events";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <Hero />
       <Artists/>
       <Gallery/>
+      <Events/>
     </>
   );
 }
