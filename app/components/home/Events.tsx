@@ -50,7 +50,10 @@ const events = [
 
 const Events = () => {
   return (
-    <section id="events" className="flex flex-col justify-center  gap-6">
+    <section
+      id="events"
+      className="flex flex-col justify-center items-center  gap-6 py-12"
+    >
       <h2 className="text-center font-special text-5xl tracking-wide text-[#F5F5F5] md:text-7xl">
         Premios y eventos
       </h2>
@@ -59,7 +62,7 @@ const Events = () => {
         eventos de tatuaje, destacando piezas premiadas en diferentes
         categorías.
       </p>
-      <ul className="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <ul className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full">
         {events.map((event) => (
           <li key={event.id}>
             <TattooCard />
@@ -68,7 +71,9 @@ const Events = () => {
       </ul>
       <Link
         href="/gallery"
-        className="bg-[#FF9800] px-2 py-2 font-bold transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#ffad33] hover:shadow-lg hover:shadow-[#FF9800]/25 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FF9800]"
+        className="bg-[#FF9800] px-2 py-2  font-bold 
+        transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#ffad33] hover:shadow-lg hover:shadow-[#FF9800]/25 
+        focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FF9800]"
       >
         Ver todos los eventos
       </Link>
