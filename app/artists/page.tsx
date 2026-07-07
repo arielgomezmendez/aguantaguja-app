@@ -80,7 +80,7 @@ export default function ArtistsPage() {
           {artists.map((artist) => (
             <li
               key={artist.id}
-              className="group overflow-hidden border border-white/10 bg-[#111111] transition-colors hover:border-[#FF9800]/70"
+              className="pb-4 border border-white/10 bg-[#111111]"
             >
               <ArtistCard artist={artist} />
             </li>

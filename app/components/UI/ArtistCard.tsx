@@ -1,5 +1,6 @@
-import Image from "next/image";
+import { Card, CardActions, CardContent, CardMedia } from "@mui/material";
 import Link from "next/link";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 type Artist = {
   id: string;
@@ -17,56 +18,58 @@ type ArtistCardProps = {
 const ArtistCard = ({ artist }: ArtistCardProps) => {
   return (
     <>
-      <div className="relative aspect-4/5 overflow-hidden bg-black">
-        <Image
-          src="/artists-photo.png"
-          alt={`Retrato de ${artist.name}, tatuador de Aguantaguja`}
-          fill
-          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-          className="scale-[1.8] object-cover h-2"
-          style={{
+      <Card className="overflow-hidden bg-[#111111] ">
+        <CardMedia
+          component="img"
+          image="/artists-photo.png"
+          title={`Retrato de ${artist.name}, tatuador de Aguantaguja`}
+          className="h-38 w-full bg-black object-contain sm:h-80"
+          sx={{
             objectPosition: artist.imagePosition,
-            transformOrigin: artist.imagePosition,
           }}
         />
-      </div>
 
-      <div className="p-6">
-        <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#FF9800]">
-          {artist.specialty}
-        </p>
-        <h2 className="mt-2 font-special text-3xl text-[#F5F5F5]">
-          {artist.name}
-        </h2>
+        <CardContent className="bg-[#111111] !pt-4 !pb-2">
+          <p className="text-[0.8rem] uppercase tracking-[0.2em] text-[#FF9800]">
+            {artist.specialty}
+          </p>
 
-        <div className="mt-4 grid gap-3">
+          <h2 className="mt-2 font-special text-4xl text-[#F5F5F5]">
+            {artist.name}
+          </h2>
+        </CardContent>
+
+        <CardActions
+          disableSpacing
+          className="flex flex-col items-stretch gap-3 bg-[#111111] px-4 sm:px-6"
+        >
           <Link
             href={`https://wa.me/${artist.phone}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="border border-white/15 px-2 py-2 text-center text-sm font-bold text-[#F5F5F5] transition-colors hover:border-[#25D366] hover:text-[#25D366]"
+            className="flex min-h-11 w-full items-center justify-center bg-[#FF9800] px-2 py-2 text-center text-sm font-bold text-black transition-colors hover:bg-[#ffad33]"
           >
-            WhatsApp · {artist.phone}
+            ESCRÍBEME AHORA
           </Link>
 
-          <div className="grid grid-cols-2 gap-3">
-            <Link
-              href={artist.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border border-white/15 px-2 py-2 text-center text-sm font-bold text-[#F5F5F5] transition-colors hover:border-[#FF9800] hover:text-[#FF9800]"
-            >
-              Instagram
-            </Link>
-            <Link
-              href="/#galery"
-              className="bg-[#FF9800] px-2 py-2 text-center text-sm font-bold text-black transition-colors hover:bg-[#ffad33]"
-            >
-              Ver galería
-            </Link>
-          </div>
-        </div>
-      </div>
+          <Link
+            href="/#gallery"
+            className="flex min-h-11 w-full items-center justify-center border border-[#FF9800] bg-black px-2 py-2 text-center text-sm font-bold text-[#FF9800] transition-colors hover:bg-[#FF9800] hover:text-black"
+          >
+            VER GALERÍA
+          </Link>
+
+          <Link
+            href={artist.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 text-sm font-bold text-[#F5F5F5] underline underline-offset-4 transition-colors hover:text-[#FF9800]"
+          >
+            <InstagramIcon fontSize="small" />
+            Sígueme en Instagram
+          </Link>
+        </CardActions>
+      </Card>
     </>
   );
 };
