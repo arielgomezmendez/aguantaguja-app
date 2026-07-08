@@ -11,17 +11,6 @@ const DesktopNav = () => {
     <ul className="pb-10 hidden items-center justify-evenly md:flex">
       <li>
         <Link
-          href="/us"
-          aria-current={pathname === "/us" ? "page" : undefined}
-          className={`transition-colors duration-300 hover:text-[#FF9800] ${
-            pathname === "/us" ? "text-[#FF9800]" : ""
-          }`}
-        >
-          Nosotros
-        </Link>
-      </li>
-      <li>
-        <Link
           href="/artists"
           aria-current={pathname === "/artists" ? "page" : undefined}
           className={`transition-colors duration-300 hover:text-[#FF9800] ${
@@ -71,20 +60,10 @@ const DesktopNav = () => {
             pathname === "/shop" ? "text-[#FF9800]" : ""
           }`}
         >
-          Tienda
+          Servicios
         </Link>
       </li>
-      <li>
-        <Link
-          href="/contact"
-          aria-current={pathname === "/contact" ? "page" : undefined}
-          className={`transition-colors duration-300 hover:text-[#FF9800] ${
-            pathname === "/contact" ? "text-[#FF9800]" : ""
-          }`}
-        >
-          Contacto
-        </Link>
-      </li>
+      
     </ul>
   );
 };
