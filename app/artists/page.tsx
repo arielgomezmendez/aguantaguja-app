@@ -21,7 +21,7 @@ const artists = [
     id: "artist-01",
     name: "Artista 01",
     specialty: "Blackwork",
-    phone: "",
+    phone: "5354189474",
     instagram: "https://www.instagram.com/aguantaguja_tattoostudio/",
     imagePosition: "8% 48%",
   },
@@ -49,20 +49,13 @@ const artists = [
     instagram: "https://www.instagram.com/aguantaguja_tattoostudio/",
     imagePosition: "69% 48%",
   },
-  {
-    id: "artist-05",
-    name: "Artista 05",
-    specialty: "Lettering",
-    phone: "",
-    instagram: "https://www.instagram.com/aguantaguja_tattoostudio/",
-    imagePosition: "92% 48%",
-  },
+  
 ];
 
 export default function ArtistsPage() {
   return (
     <>
-      <section className="mx-auto max-w-7xl px-6 py-16 md:py-24">
+      <section className="mx-auto max-w-7xl px-2 md:py-4">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#FF9800]">
             Aguantaguja

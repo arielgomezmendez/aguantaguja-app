@@ -3,21 +3,16 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import DesktopNav from "../home/HeaderComponents/DesktopNav";
-
-const navItems = [
-  { href: "/us", label: "Nosotros" },
-  { href: "/artists", label: "Artistas" },
-  { href: "/events", label: "Eventos" },
-  { href: "/gallery", label: "Galeria" },
-  { href: "/shop", label: "Tienda" },
-  { href: "/contact", label: "Contacto" },
-];
+import { navItems } from "./navItems";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname(); // usePathname (hook of Next) is used to get the route to set 
+  // styles in the active link of the header
 
   return (
     <header className="text-[#A1A1AA]">
@@ -45,17 +40,25 @@ const Header = () => {
 
         {isMenuOpen && (
           <ul className="mx-6 mt-4 flex flex-col gap-4 border-t border-white/10 py-6 text-center md:hidden">
-            {navItems.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  onClick={() => setIsMenuOpen(false)}
-                  className="block py-1 transition-colors duration-300 hover:text-[#FF9800]"
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
+            {navItems.map((item) => {
+              const isActive =
+                pathname === item.href || pathname.startsWith(`${item.href}/`);
+
+              return (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    aria-current={isActive ? "page" : undefined}
+                    className={`block py-1 transition-colors duration-300 hover:text-[#FF9800] ${
+                      isActive ? "text-[#FF9800]" : ""
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         )}
       </nav>

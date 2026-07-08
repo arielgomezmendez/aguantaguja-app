@@ -1,14 +1,21 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import { usePathname } from "next/navigation";
 
 const DesktopNav = () => {
+  const pathname = usePathname();
+
   return (
     <ul className="pb-10 hidden items-center justify-evenly md:flex">
       <li>
         <Link
           href="/us"
-          className="transition-colors duration-300 hover:text-[#FF9800]"
+          aria-current={pathname === "/us" ? "page" : undefined}
+          className={`transition-colors duration-300 hover:text-[#FF9800] ${
+            pathname === "/us" ? "text-[#FF9800]" : ""
+          }`}
         >
           Nosotros
         </Link>
@@ -16,7 +23,10 @@ const DesktopNav = () => {
       <li>
         <Link
           href="/artists"
-          className="transition-colors duration-300 hover:text-[#FF9800]"
+          aria-current={pathname === "/artists" ? "page" : undefined}
+          className={`transition-colors duration-300 hover:text-[#FF9800] ${
+            pathname === "/artists" ? "text-[#FF9800]" : ""
+          }`}
         >
           Artistas
         </Link>
@@ -24,7 +34,10 @@ const DesktopNav = () => {
       <li>
         <Link
           href="/events"
-          className="transition-colors duration-300 hover:text-[#FF9800]"
+          aria-current={pathname === "/events" ? "page" : undefined}
+          className={`transition-colors duration-300 hover:text-[#FF9800] ${
+            pathname === "/events" ? "text-[#FF9800]" : ""
+          }`}
         >
           Eventos
         </Link>
@@ -42,7 +55,10 @@ const DesktopNav = () => {
       <li>
         <Link
           href="/gallery"
-          className="transition-colors duration-300 hover:text-[#FF9800]"
+          aria-current={pathname === "/gallery" ? "page" : undefined}
+          className={`transition-colors duration-300 hover:text-[#FF9800] ${
+            pathname === "/gallery" ? "text-[#FF9800]" : ""
+          }`}
         >
           Galería
         </Link>
@@ -50,7 +66,10 @@ const DesktopNav = () => {
       <li>
         <Link
           href="/shop"
-          className="transition-colors duration-300 hover:text-[#FF9800]"
+          aria-current={pathname === "/shop" ? "page" : undefined}
+          className={`transition-colors duration-300 hover:text-[#FF9800] ${
+            pathname === "/shop" ? "text-[#FF9800]" : ""
+          }`}
         >
           Tienda
         </Link>
@@ -58,7 +77,10 @@ const DesktopNav = () => {
       <li>
         <Link
           href="/contact"
-          className="transition-colors duration-300 hover:text-[#FF9800]"
+          aria-current={pathname === "/contact" ? "page" : undefined}
+          className={`transition-colors duration-300 hover:text-[#FF9800] ${
+            pathname === "/contact" ? "text-[#FF9800]" : ""
+          }`}
         >
           Contacto
         </Link>
