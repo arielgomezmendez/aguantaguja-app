@@ -9,6 +9,7 @@ type Artist = {
   phone: string;
   instagram: string;
   imagePosition: string;
+  imageUrl:string;
 };
 
 type ArtistCardProps = {
@@ -21,8 +22,7 @@ const ArtistCard = ({ artist }: ArtistCardProps) => {
       <Card className="overflow-hidden bg-[#111111] ">
         <CardMedia
           component="img"
-          image="/artists-photo.png"
-          title={`Retrato de ${artist.name}, tatuador de Aguantaguja`}
+          image={artist.imageUrl}          title={`Retrato de ${artist.name}, tatuador de Aguantaguja`}
           className="h-38 w-full bg-black object-contain sm:h-80"
           sx={{
             objectPosition: artist.imagePosition,
