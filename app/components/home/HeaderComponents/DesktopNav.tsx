@@ -54,10 +54,10 @@ const DesktopNav = () => {
       </li>
       <li>
         <Link
-          href="/shop"
-          aria-current={pathname === "/shop" ? "page" : undefined}
+          href="/services"
+          aria-current={pathname === "/services" ? "page" : undefined}
           className={`transition-colors duration-300 hover:text-[#FF9800] ${
-            pathname === "/shop" ? "text-[#FF9800]" : ""
+            pathname === "/services" ? "text-[#FF9800]" : ""
           }`}
         >
           Servicios
