@@ -31,7 +31,7 @@ export default function ServicesPage() {
         </p>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-6 px-6 pb-16">
+      <section className="mx-auto grid md:ml-25 max-w-7xl gap-6 px-6 pb-16">
         {services.map((service) => (
           <ServiceCard key={service.title} service={service} />
         ))}
