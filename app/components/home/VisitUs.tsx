@@ -4,7 +4,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 const latitude = 22.412968;
 const longitude = -83.699929;
 
-const studioAddress = "Aguantaguja Tattoo Studio, Calle Sol, No 74, Pinar del Río, Pinar del Río, Cuba";
+const studioAddress = "Calle Sol #74 / San Juan y Galeano, Pinar del Río, Cuba 20100";
 const mapUrl = `https://www.google.com/maps?q=${latitude},${longitude}&z=18&output=embed`
 
 const VisitUs = () => {

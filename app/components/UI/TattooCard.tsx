@@ -17,30 +17,30 @@ const TattooCard = () => {
           Havana Tattoo Expo
         </h3>
 
-        <dl className="mt-5 grid grid-cols-2 gap-4">
+        <dl className="mt-2 md:mt-5 md:grid md:grid-cols-2 md:gap-4 gap-1 flex flex-col">
           <div className="border-t border-white/10 pt-3">
-            <dt className="text-xs font-bold uppercase tracking-wider text-[#A1A1AA]">
+            <dt className="sr-only text-xs font-bold uppercase tracking-wider text-[#A1A1AA]">
               Categoría
             </dt>
             <dd className="mt-1 font-medium">Blackwork</dd>
           </div>
 
           <div className="border-t border-white/10 pt-3">
-            <dt className="text-xs font-bold uppercase tracking-wider text-[#A1A1AA]">
+            <dt className="sr-only text-xs font-bold uppercase tracking-wider text-[#A1A1AA]">
               Premio
             </dt>
             <dd className="mt-1 font-medium text-[#FF9800]">1.er lugar</dd>
           </div>
 
           <div className="border-t border-white/10 pt-3">
-            <dt className="text-xs font-bold uppercase tracking-wider text-[#A1A1AA]">
+            <dt className="sr-only text-xs font-bold uppercase tracking-wider text-[#A1A1AA]">
               Ciudad
             </dt>
             <dd className="mt-1 font-medium">La Habana</dd>
           </div>
 
           <div className="border-t border-white/10 pt-3">
-            <dt className="text-xs font-bold uppercase tracking-wider text-[#A1A1AA]">
+            <dt className="sr-only text-xs font-bold uppercase tracking-wider text-[#A1A1AA]">
               Año
             </dt>
             <dd className="mt-1 font-medium">2025</dd>
