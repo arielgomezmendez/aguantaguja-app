@@ -15,7 +15,7 @@ export default function GalleryPage() {
           Aguantaguja
         </p>
         <h1 className="mt-4 font-special text-5xl leading-tight text-[#F5F5F5] md:text-7xl">
-          Galeria
+          Galería
         </h1>
         <p className="mx-auto mt-5 max-w-3xl leading-7 text-[#A1A1AA]">
           Explora tatuajes realizados en el estudio y filtra por artista para

@@ -1,28 +1,19 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import {
-  Card,
-  CardContent,
-  CardMedia,
-  Chip,
-  Stack,
-} from "@mui/material";
+import { useState } from "react";
+import { CardMedia, Chip, Stack } from "@mui/material";
 import { artists } from "../artists/artistsData";
 import { tattoos } from "./galleryData";
 
 const allArtistsFilter = "all";
 
 export default function GalleryClient() {
-  const [selectedArtistId, setSelectedArtistId] = useState(allArtistsFilter);
+  const [selectedArtistName, setSelectedArtistName] = useState(allArtistsFilter);
 
   const filteredTattoos =
-    selectedArtistId === allArtistsFilter
+    selectedArtistName === allArtistsFilter
       ? tattoos
-      : tattoos.filter((tattoo) => tattoo.artistId === selectedArtistId);
-
-  const getArtistName = (artistId: string) =>
-    artists.find((artist) => artist.id === artistId)?.name ?? "Aguantaguja";
+      : tattoos.filter((tattoo) => tattoo.artistId === selectedArtistName);
 
   return (
     <section className="mx-auto max-w-7xl px-6 pb-20">
@@ -36,64 +27,59 @@ export default function GalleryClient() {
       >
         <Chip
           label="Todos"
-          onClick={() => setSelectedArtistId(allArtistsFilter)}
+          onClick={() => setSelectedArtistName(allArtistsFilter)}
           variant={
-            selectedArtistId === allArtistsFilter ? "filled" : "outlined"
+            selectedArtistName === allArtistsFilter ? "filled" : "outlined"
           }
           sx={{
             borderColor: "rgba(255,255,255,0.18)",
             backgroundColor:
-              selectedArtistId === allArtistsFilter ? "#FF9800" : "#111111",
-            color: selectedArtistId === allArtistsFilter ? "#000" : "#F5F5F5",
+              selectedArtistName === allArtistsFilter ? "#FF9800" : "#111111",
+            color: selectedArtistName === allArtistsFilter ? "#000" : "#F5F5F5",
             fontWeight: 700,
             "&:hover": {
               backgroundColor:
-                selectedArtistId === allArtistsFilter ? "#ffad33" : "#1b1b1b",
+                selectedArtistName === allArtistsFilter ? "#ffad33" : "#1b1b1b",
             },
           }}
         />
 
         {artists.map((artist) => (
           <Chip
+            key={artist.id}
             label={artist.name}
-            onClick={() => setSelectedArtistId(artist.id)}
-            variant={selectedArtistId === artist.id ? "filled" : "outlined"}
+            onClick={() => setSelectedArtistName(artist.name)}
+            variant={selectedArtistName === artist.name ? "filled" : "outlined"}
             sx={{
               borderColor: "rgba(255,255,255,0.18)",
               backgroundColor:
-                selectedArtistId === artist.id ? "#FF9800" : "#111111",
-              color: selectedArtistId === artist.id ? "#000" : "#F5F5F5",
+                selectedArtistName === artist.name ? "#FF9800" : "#111111",
+              color: selectedArtistName === artist.name ? "#000" : "#F5F5F5",
               fontWeight: 700,
               "&:hover": {
                 backgroundColor:
-                  selectedArtistId === artist.id ? "#ffad33" : "#1b1b1b",
+                  selectedArtistName === artist.name ? "#ffad33" : "#1b1b1b",
               },
             }}
           />
         ))}
       </Stack>
 
-      <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <ul className="columns-1 gap-3 sm:columns-2 lg:columns-3 xl:columns-4 2xl:columns-5">
         {filteredTattoos.map((tattoo) => (
-          <li key={tattoo.id}>
-            <Card className="h-full overflow-hidden border border-white/10 !bg-[#111111] !text-[#F5F5F5]">
+          <li key={tattoo.id} className="mb-3 break-inside-avoid">
+            <figure aria-label={`${tattoo.title}. ${tattoo.style}`}>
               <CardMedia
                 component="img"
                 image={tattoo.imageUrl}
                 alt={tattoo.imageAlt}
                 title={tattoo.imageAlt}
-                className="h-80 bg-black object-cover"
+                className="h-auto w-full bg-black"
               />
-              <CardContent className="!p-5">
-                <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#FF9800]">
-                  {getArtistName(tattoo.artistId)}
-                </p>
-                <h2 className="mt-3 font-special text-3xl text-[#F5F5F5]">
-                  {tattoo.title}
-                </h2>
-                <p className="mt-2 text-[#A1A1AA]">{tattoo.style}</p>
-              </CardContent>
-            </Card>
+              <figcaption className="sr-only">
+                {tattoo.title} - {tattoo.style}
+              </figcaption>
+            </figure>
           </li>
         ))}
       </ul>
