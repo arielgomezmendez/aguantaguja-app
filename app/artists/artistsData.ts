@@ -41,6 +41,6 @@ export const artists = [
     phone: "",
     instagram: "https://www.instagram.com/aguantaguja_tattoostudio/",
     imagePosition: "69% 48%",
-    imageUrl:"",
+    imageUrl:"https://res.cloudinary.com/dcc1qdoob/image/upload/v1783696254/Francisco_uh1gmt.jpg",
   },
 ];
