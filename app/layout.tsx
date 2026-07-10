@@ -24,6 +24,11 @@ const specialElite = Special_Elite({
 export const metadata: Metadata = {
   title: "Aguantaguja tattoo studio",
   description: "Especialistas en blackwork, realismo y tatuajes personalizados",
+  icons: {
+    icon: "/aguantaguja-logo.png",
+    shortcut: "/aguantaguja-logo.png",
+    apple: "/aguantaguja-logo.png",
+  },
 };
 
 export default function RootLayout({
