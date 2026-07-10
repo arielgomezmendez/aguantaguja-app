@@ -23,7 +23,7 @@ const ArtistCard = ({ artist }: ArtistCardProps) => {
         <CardMedia
           component="img"
           image={artist.imageUrl}          title={`Retrato de ${artist.name}, tatuador de Aguantaguja`}
-          className="h-38 w-full bg-black object-contain sm:h-80"
+          className="h-120 w-full bg-black object-contain sm:h-80"
           sx={{
             objectPosition: artist.imagePosition,
           }}
