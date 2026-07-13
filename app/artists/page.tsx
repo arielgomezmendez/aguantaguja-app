@@ -12,12 +12,9 @@ export const metadata: Metadata = {
 export default function ArtistsPage() {
   return (
     <>
-      <section className="mx-auto max-w-7xl px-2 md:py-4">
+      <section className="mx-auto max-w-7xl bg-[#111111] px-2 md:py-8">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#FF9800]">
-            Aguantaguja
-          </p>
-          <h1 className="mt-4 font-special text-5xl leading-tight text-[#F5F5F5] md:text-7xl">
+          <h1 className="mt-10 font-special text-5xl leading-tight text-[#F5F5F5] md:text-7xl">
             Conoce a nuestros artistas
           </h1>
           <p className="mt-5 leading-7 text-[#A1A1AA]">

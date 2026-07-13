@@ -12,10 +12,7 @@ export const metadata: Metadata = {
 export default function EventsPage() {
   return (
     <>
-      <section className="mx-auto max-w-7xl px-6 py-10 text-center md:py-16">
-        <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#FF9800]">
-          Aguantaguja
-        </p>
+      <section className="mx-auto max-w-7xl bg-[#111111] px-6 py-10 text-center md:py-16">
         <h1 className="mt-4 font-special text-5xl leading-tight text-[#F5F5F5] md:text-7xl">
           Premios y eventos
         </h1>
@@ -25,7 +22,7 @@ export default function EventsPage() {
         </p>
       </section>
 
-      <section className="mx-auto max-w-7xl space-y-12 px-6 pb-20">
+      <section className="mx-auto max-w-7xl space-y-12 bg-[#111111] px-6 pb-20">
         {events.map((event) => (
           <article
             key={event.id}

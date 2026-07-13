@@ -18,10 +18,7 @@ const processSteps = [
 export default function ServicesPage() {
   return (
     <>
-      <section className="mx-auto max-w-7xl px-6 py-10 text-center md:py-16">
-        <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#FF9800]">
-          Aguantaguja
-        </p>
+      <section className="mx-auto max-w-7xl bg-[#111111] px-6 py-10 text-center md:py-16">
         <h1 className="mt-4 font-special text-5xl leading-tight text-[#F5F5F5] md:text-7xl">
           Servicios
         </h1>
@@ -31,7 +28,7 @@ export default function ServicesPage() {
         </p>
       </section>
 
-      <section className="mx-auto grid md:ml-25 max-w-7xl gap-6 px-6 pb-16">
+      <section className="mx-auto grid max-w-7xl gap-6 bg-[#111111] px-6 pb-16 md:ml-25">
         {services.map((service) => (
           <ServiceCard key={service.title} service={service} />
         ))}
@@ -68,7 +65,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-6 py-16 text-center md:py-20">
+      <section className="mx-auto max-w-4xl bg-[#111111] px-6 py-16 text-center md:py-20">
         <h2 className="font-special text-4xl text-[#F5F5F5] md:text-5xl">
           Listo para empezar?
         </h2>

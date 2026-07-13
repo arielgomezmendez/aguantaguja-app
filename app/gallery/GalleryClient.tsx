@@ -8,15 +8,16 @@ import { tattoos } from "./galleryData";
 const allArtistsFilter = "all";
 
 export default function GalleryClient() {
-  const [selectedArtistName, setSelectedArtistName] = useState(allArtistsFilter);
-
+  const [selectedArtistName, setSelectedArtistName] =
+    useState(allArtistsFilter);
+  
   const filteredTattoos =
     selectedArtistName === allArtistsFilter
       ? tattoos
       : tattoos.filter((tattoo) => tattoo.artistId === selectedArtistName);
 
   return (
-    <section className="mx-auto max-w-7xl px-6 pb-20">
+    <section className="mx-auto max-w-7xl bg-[#111111] px-6 pb-20">
       <Stack
         component="div"
         direction="row"
