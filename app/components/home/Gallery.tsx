@@ -13,7 +13,8 @@ const Gallery = () => {
       <h2 className="font-special text-5xl tracking-wide md:text-7xl text-[#F5F5F5]">
         Galería
       </h2>
-      <ul className="w-full max-w-7xl columns-1 gap-3 sm:columns-2 lg:columns-3 xl:columns-4 2xl:columns-5">
+      <div className="relative w-full max-w-7xl pb-20 md:pb-24">
+        <ul className="w-full columns-1 gap-3 sm:columns-2 lg:columns-3 xl:columns-4 2xl:columns-5">
         {galleryPreview.map((tattoo) => (
           <li key={tattoo.id} className="mb-3 break-inside-avoid">
             <figure aria-label={`${tattoo.title}. ${tattoo.style}`}>
@@ -31,13 +32,15 @@ const Gallery = () => {
             </figure>
           </li>
         ))}
-      </ul>
-      <Link
+        </ul>
+        <div className="pointer-events-none absolute right-0 bottom-20 left-0 h-52 bg-gradient-to-b from-transparent to-[#111111] md:bottom-24 md:h-64" />
+        <Link
         href="/gallery"
-        className="bg-[#FF9800] px-2 py-2 font-bold transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#ffad33] hover:shadow-lg hover:shadow-[#FF9800]/25 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FF9800]"
+        className="absolute bottom-10 left-1/2 z-10 -translate-x-1/2 bg-[#FF9800] px-2 py-2 font-bold transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#ffad33] hover:shadow-lg hover:shadow-[#FF9800]/25 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FF9800] md:bottom-12"
       >
         Ver más proyectos
-      </Link>
+        </Link>
+      </div>
     </section>
   );
 };

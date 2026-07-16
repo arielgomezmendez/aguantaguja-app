@@ -14,7 +14,7 @@ export const artists = [
     phone: "5354189474",
     instagram: "https://www.instagram.com/aguantaguja_tattoostudio/",
     imagePosition: "8% 48%",
-    imageUrl:"https://res.cloudinary.com/dcc1qdoob/image/upload/v1783563729/Orlando-1_jjr2om.jpg",
+    imageUrl: "/orlando.jpeg",
   },
   {
     id: "artist-02",
@@ -23,7 +23,7 @@ export const artists = [
     phone: "",
     instagram: "https://www.instagram.com/aguantaguja_tattoostudio/",
     imagePosition: "31% 48%",
-    imageUrl:"https://res.cloudinary.com/dcc1qdoob/image/upload/v1783563653/Kike_i9rqta.jpg",
+    imageUrl: "/enrique.jpg",
   },
   {
     id: "artist-03",
@@ -32,7 +32,7 @@ export const artists = [
     phone: "",
     instagram: "https://www.instagram.com/aguantaguja_tattoostudio/",
     imagePosition: "50% 48%",
-    imageUrl:"https://res.cloudinary.com/dcc1qdoob/image/upload/v1783563710/Osniel-1_bgw2q3.jpg",
+    imageUrl: "/osniel.jpeg",
   },
   {
     id: "artist-04",
@@ -41,6 +41,6 @@ export const artists = [
     phone: "",
     instagram: "https://www.instagram.com/aguantaguja_tattoostudio/",
     imagePosition: "69% 48%",
-    imageUrl:"https://res.cloudinary.com/dcc1qdoob/image/upload/v1783696254/Francisco_uh1gmt.jpg",
+    imageUrl: "/francisco.jpeg",
   },
 ];
