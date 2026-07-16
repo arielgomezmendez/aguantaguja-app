@@ -56,7 +56,7 @@ const ArtistCard = ({ artist }: ArtistCardProps) => {
           </Link>
 
           <Link
-            href="/#gallery"
+            href="/gallery"
             className="flex min-h-11 w-full items-center justify-center border border-[#FF9800] bg-black px-2 py-2 
             text-center text-sm font-bold text-[#FF9800] transition-colors hover:bg-[#FF9800] hover:text-black"
           >
