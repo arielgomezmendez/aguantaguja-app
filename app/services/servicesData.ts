@@ -29,7 +29,7 @@ export const services: Service[] = [
     imageAlt: "Servicio estetico en Aguantaguja Tattoo Studio",
   },
   {
-    title: "Coberturas",
+    title: "Cover-up",
     description:
       "Evaluamos tatuajes anteriores para proponer una solucion visual limpia y viable.",
     imageUrl:
