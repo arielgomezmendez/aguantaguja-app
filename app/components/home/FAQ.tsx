@@ -14,24 +14,26 @@ const FAQ = () => {
           </p>
         </div>
 
-        <div className="space-y-3">
+        <ul className="space-y-3">
           {questions.map((item) => (
-            <details
-              key={item.question}
-              className="group border border-white/10 bg-[#111111] p-5"
-            >
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-left text-lg font-bold [&::-webkit-details-marker]:hidden">
-                <span>{item.question}</span>
-                <span className="shrink-0 text-2xl leading-none text-[#FF9800] transition-transform duration-300 group-open:rotate-45">
-                  +
-                </span>
-              </summary>
-              <p className="mt-4 leading-relaxed text-[#A1A1AA]">
-                {item.answer}
-              </p>
-            </details>
+            <li key={item.question}>
+              <details className="group border border-white/10 bg-[#111111] p-5">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-left text-lg font-bold [&::-webkit-details-marker]:hidden">
+                  <span>{item.question}</span>
+                  <span
+                    className="shrink-0 text-2xl leading-none text-[#FF9800] transition-transform duration-300 group-open:rotate-45"
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </summary>
+                <p className="mt-4 leading-relaxed text-[#A1A1AA]">
+                  {item.answer}
+                </p>
+              </details>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );
