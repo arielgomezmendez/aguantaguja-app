@@ -43,4 +43,13 @@ export const artists = [
     imagePosition: "69% 48%",
     imageUrl: "/francisco.jpeg",
   },
+  {
+    id: "artist-05",
+    name: "Zara",
+    specialty: "Diseño personalizado",
+    phone: "",
+    instagram: "https://www.instagram.com/aguantaguja_tattoostudio/",
+    imagePosition: "69% 48%",
+    imageUrl: "/zara.jpeg",
+  },
 ];
