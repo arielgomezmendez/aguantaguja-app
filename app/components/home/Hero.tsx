@@ -5,8 +5,9 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="flex flex-col items-center justify-center text-center px-6 py-18 bg-[#111111]"
+      className="relative isolate flex flex-col items-center justify-center overflow-hidden px-6 py-18 text-center"
     >
+      <div className="absolute inset-0 -z-10 bg-[url('/hero-background.png')] bg-cover bg-center bg-no-repeat opacity-15" />
       <h1 className="text-[#F5F5F5] text-6xl  md:text-8xl tracking-wide font-special">
         ARTE EN LA PIEL
       </h1>

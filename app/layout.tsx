@@ -25,9 +25,9 @@ export const metadata: Metadata = {
   title: "Aguantaguja tattoo studio",
   description: "Especialistas en blackwork, realismo y tatuajes personalizados",
   icons: {
-    icon: "/aguantaguja-logo.png",
-    shortcut: "/aguantaguja-logo.png",
-    apple: "/aguantaguja-logo.png",
+    icon: "/aguantaguja-favicon.png",
+    shortcut: "/aguantaguja-favicon.png",
+    apple: "/aguantaguja-favicon.png",
   },
 };
 
