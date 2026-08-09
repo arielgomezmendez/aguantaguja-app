@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Special_Elite } from "next/font/google";
+import { Geist_Mono, Lexend, Special_Elite } from "next/font/google";
 import "./globals.css";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const lexend = Lexend({
+  variable: "--font-lexend",
   subsets: ["latin"],
 });
 
@@ -39,7 +39,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${geistSans.variable} ${geistMono.variable}  ${specialElite.variable} h-full antialiased`}
+      className={`${lexend.variable} ${geistMono.variable}  ${specialElite.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Header />
