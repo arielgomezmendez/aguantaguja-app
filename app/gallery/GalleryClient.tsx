@@ -7,6 +7,29 @@ import { tattoos } from "./galleryData";
 
 const allArtistsFilter = "all";
 
+const getFilterChipStyles = (isSelected: boolean) => ({
+  borderColor: "rgba(255,255,255,0.18)",
+  backgroundColor: isSelected ? "#FF9800" : "#111111",
+  color: isSelected ? "#000" : "#F5F5F5",
+  fontWeight: 700,
+  "&:hover": {
+    backgroundColor: isSelected ? "#ffad33" : "#1b1b1b",
+  },
+  "&:focus": {
+    backgroundColor: isSelected ? "#FF9800" : "#111111",
+    color: isSelected ? "#000" : "#F5F5F5",
+  },
+  "&.Mui-focusVisible": {
+    backgroundColor: isSelected ? "#FF9800" : "#111111",
+    color: isSelected ? "#000" : "#F5F5F5",
+    outline: "2px solid #FF9800",
+    outlineOffset: "3px",
+  },
+  "& .MuiChip-label": {
+    color: "inherit",
+  },
+});
+
 export default function GalleryClient() {
   const [selectedArtistName, setSelectedArtistName] =
     useState(allArtistsFilter);
@@ -27,41 +50,27 @@ export default function GalleryClient() {
         sx={{ flexWrap: "wrap" }}
       >
         <Chip
+          component="button"
+          type="button"
           label="Todos"
           onClick={() => setSelectedArtistName(allArtistsFilter)}
+          aria-pressed={selectedArtistName === allArtistsFilter}
           variant={
             selectedArtistName === allArtistsFilter ? "filled" : "outlined"
           }
-          sx={{
-            borderColor: "rgba(255,255,255,0.18)",
-            backgroundColor:
-              selectedArtistName === allArtistsFilter ? "#FF9800" : "#111111",
-            color: selectedArtistName === allArtistsFilter ? "#000" : "#F5F5F5",
-            fontWeight: 700,
-            "&:hover": {
-              backgroundColor:
-                selectedArtistName === allArtistsFilter ? "#ffad33" : "#1b1b1b",
-            },
-          }}
+          sx={getFilterChipStyles(selectedArtistName === allArtistsFilter)}
         />
 
         {artists.map((artist) => (
           <Chip
             key={artist.id}
+            component="button"
+            type="button"
             label={artist.name}
             onClick={() => setSelectedArtistName(artist.name)}
+            aria-pressed={selectedArtistName === artist.name}
             variant={selectedArtistName === artist.name ? "filled" : "outlined"}
-            sx={{
-              borderColor: "rgba(255,255,255,0.18)",
-              backgroundColor:
-                selectedArtistName === artist.name ? "#FF9800" : "#111111",
-              color: selectedArtistName === artist.name ? "#000" : "#F5F5F5",
-              fontWeight: 700,
-              "&:hover": {
-                backgroundColor:
-                  selectedArtistName === artist.name ? "#ffad33" : "#1b1b1b",
-              },
-            }}
+            sx={getFilterChipStyles(selectedArtistName === artist.name)}
           />
         ))}
       </Stack>
