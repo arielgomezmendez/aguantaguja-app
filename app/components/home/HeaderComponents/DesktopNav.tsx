@@ -38,6 +38,7 @@ const DesktopNav = () => {
             alt="Aguantaguja Tattoo Studio"
             width={120}
             height={120}
+            unoptimized
           />
         </Link>
       </li>
