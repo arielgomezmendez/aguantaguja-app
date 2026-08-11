@@ -9,25 +9,24 @@ const Hero = () => {
     >
       <div className="absolute inset-0 -z-10 bg-[url('/hero-background.png')] bg-cover bg-center bg-no-repeat opacity-15" />
       <h1 className="text-[#F5F5F5] text-6xl  md:text-8xl tracking-wide font-special">
-        ARTE EN LA PIEL
+        TU PIEL MERECE NUESTRA AGUJA
       </h1>
       <p className="text-[#F5F5F5] text-xl my-8 mx-16">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus
-        quos et quaerat odit! Dolorum eveniet velit totam magni est odit dolor
-        temporibus ab hic quae? Perspiciatis sapiente maxime voluptatibus sit.
+        Somos el primer estudio de arte corporal de Pinar del Río: 
+        un espacio donde artistas con estilos diferentes transforman tus ideas en piezas únicas.
       </p>
       <div className="hero-buttons  flex md:flex-row flex-col gap-6">
         <Link
           href="/artists"
           className="bg-[#FF9800] px-3 py-2 font-bold transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#ffad33] hover:shadow-lg hover:shadow-[#FF9800]/25 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FF9800]"
         >
-          Conoce a nuestros artistas
+          Conoce Aguantaguja
         </Link>
         <Link
-          href="/us"
+          href="/#"
           className="bg-[#F5F5F5] px-3 py-2 font-bold transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#FF9800] hover:shadow-lg hover:shadow-[#FF9800]/25 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FF9800]"
         >
-          Visita el estudio
+          Quiero tatuarme
         </Link>
       </div>
     </section>

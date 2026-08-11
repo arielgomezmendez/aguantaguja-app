@@ -18,18 +18,18 @@ const Artists = () => {
       />
       <div className="relative z-10 max-w-3xl">
         <h2 className="font-special text-5xl tracking-wide md:text-7xl text-[#F5F5F5]">
-          Artistas
+          Nuestros artistas
         </h2>
         <p className="text-xl text-[#F5F5F5]">
-          Cada artista aporta una visión única. Juntos, dominamos cada estilo
-          con una calidad inigualable.
+          Aguantaguja reúne a varios artistas con diferentes estilos y formas de crear,
+           trabajando y creciendo juntos bajo un mismo techo.
         </p>
       </div>
       <Link
         href="/artists"
-        className="relative z-10 bg-[#FF9800] px-2 py-2 font-bold transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#ffad33] hover:shadow-lg hover:shadow-[#FF9800]/25 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FF9800]"
+        className="relative z-10 flex items-center justify-center gap-2  font-bold text-[#FF9800] underline underline-offset-4 transition-colors"
       >
-        Conoce a nuestros artistas
+        Encuentra el indicado para tu idea →
       </Link>
     </section>
   );
