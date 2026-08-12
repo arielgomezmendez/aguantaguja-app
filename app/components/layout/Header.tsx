@@ -20,7 +20,7 @@ const Header = () => {
         <div className="flex items-center justify-between px-6 pt-4 md:hidden">
           <Link href="/" onClick={() => setIsMenuOpen(false)}>
             <Image
-              src="/aguantaguja-logo.png"
+              src="/AA-GIF.gif"
               alt="Aguantaguja Tattoo Studio"
               width={82}
               height={82}
