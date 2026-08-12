@@ -34,7 +34,7 @@ const DesktopNav = () => {
       <li style={{ position: "relative", top: "28px" }}>
         <Link href="/">
           <Image
-            src="/GIF.gif"
+            src="/AA-GIF.gif"
             alt="Aguantaguja Tattoo Studio"
             width={120}
             height={120}
