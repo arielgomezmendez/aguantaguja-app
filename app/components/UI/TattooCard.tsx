@@ -3,16 +3,39 @@ import React from "react";
 
 const TattooCard = () => {
   return (
-    <Card className="group mx-auto max-w-sm overflow-hidden border border-white/10 !bg-[#111111] !text-[#F5F5F5] shadow-xl ">
+    <Card
+      className="group mx-auto max-w-sm overflow-hidden border border-white/10 !bg-[#111111] !text-[#F5F5F5] shadow-xl "
+      sx={{
+        display: "flex",
+        flexDirection: {
+          xs: "row", // Móvil: imagen izquierda y texto derecha
+          sm: "column", // Escritorio: imagen arriba y texto debajo
+        },
+      }}
+    >
       <CardMedia
         component="img"
-        height="20"
         image="https://res.cloudinary.com/dcc1qdoob/image/upload/v1782584654/593f1117c5cc36cdeecb580d2a5b751a_tpozgc.jpg"
         alt="Tatuaje premiado en Havana Tattoo Expo"
-        className="h-64 object-cover "
+        className="h-64"
+        sx={{
+          flexShrink: 0,
+          objectFit: "cover",
+          width: {
+            xs: "50%",
+            sm: "100%",
+          },
+        }}
       />
-
-      <CardContent className="p-6!">
+      <CardContent
+        className="p-6!"
+        sx={{
+          width: {
+            xs: "50%",
+            sm: "auto",
+          },
+        }}
+      >
         <h3 className="border-l-4 border-[#FF9800] pl-3 text-xl font-semibold">
           Havana Tattoo Expo
         </h3>

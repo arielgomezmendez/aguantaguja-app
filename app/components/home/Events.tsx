@@ -16,7 +16,7 @@ const Events = () => {
         eventos de tatuaje, destacando piezas premiadas en diferentes
         categorías.
       </p>
-      <ul className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full">
+      <ul className="grid sm:grid-cols-1 md:grid-cols-4 gap-6 w-full">
         {events.map((event) => (
           <li key={event.id}>
             <TattooCard />

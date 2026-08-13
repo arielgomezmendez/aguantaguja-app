@@ -14,7 +14,7 @@ const Gallery = () => {
         Galería
       </h2>
       <div className="relative w-full max-w-7xl pb-20 md:pb-24">
-        <ul className="w-full columns-1 gap-3 sm:columns-2 lg:columns-3 xl:columns-4 2xl:columns-5">
+        <ul className="w-full columns-2 gap-3 sm:columns-2 lg:columns-3 xl:columns-4 2xl:columns-5">
           {galleryPreview.map((tattoo) => (
             <li key={tattoo.id} className="mb-3 break-inside-avoid">
               <Image
